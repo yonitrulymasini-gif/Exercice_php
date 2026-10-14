@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 function accessMessage(int $age, bool $hasTicket, bool $banned): string {
-    if ($age < 16) {
+     if ($age < 16) {
         return "Tu n'as pas l'age requis";
     }
 
