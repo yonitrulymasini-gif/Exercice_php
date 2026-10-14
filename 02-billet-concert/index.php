@@ -6,4 +6,4 @@ $prix = 35.0;
 // TODO : produire trois affichages distincts.
 echo "Le numéro est $numero \n";
 echo "l'artiste est ". $artiste . "\n";
-echo sprintf('%.2f', $prix);
+echo sprintf('Billet n° %04d - %.2f €', $numero, $prix), "\n";
