@@ -12,6 +12,8 @@ echo ("\n");
 echo ("Le niveau est $niveau et le type est ");
 echo get_debug_type($niveau);
 echo ("\n");
+$niveauTexte = "10";
+var_dump ($niveau === $niveauTexte);
 
 echo ("L'energie est $energie et le type est ");
 echo get_debug_type($energie);
