@@ -1,6 +1,21 @@
 <?php
 declare(strict_types=1);
-// TODO : enum OrderStatus, function label(OrderStatus $status): string.
-foreach (['paid', 'lost'] as $raw) {
-    // TODO : conversion et affichage.
+enum statut: string
+{
+    case brouillon = "b";
+    case payée = "p"; 
+    case expédiée = "e";
 }
+
+$h = statut::tryFrom('b');
+var_dump($h);
+
+foreach (['paid', 'lost'] as $raw) {
+    $etiquette = match ($raw) {
+    "paid" => 'Succès',
+    "lost" => 'Introuvable',
+    default => 'Autre réponse',
+    };
+    echo $etiquette,"\n";
+}
+
